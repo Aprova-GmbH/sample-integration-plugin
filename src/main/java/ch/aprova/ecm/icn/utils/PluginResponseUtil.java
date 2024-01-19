@@ -112,7 +112,7 @@ public class PluginResponseUtil {
             response.setHeader("Content-Encoding", "gzip");
             response.setContentType("text/plain");
             GZIPOutputStream gzos = new GZIPOutputStream(response.getOutputStream());
-            Writer writer = new OutputStreamWriter(gzos, StandardCharsets.UTF_8;
+            Writer writer = new OutputStreamWriter(gzos, StandardCharsets.UTF_8);
             if (isSecureServiceEnabled(request)) {
                 writer.write(SECURE_JSON_PREFIX);
                 returnVal = true;
